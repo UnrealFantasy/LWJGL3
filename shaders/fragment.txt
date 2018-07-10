@@ -1,0 +1,11 @@
+#version 330 core
+
+in vec2 txtr;
+
+out vec4 pixel;
+
+uniform sampler2D sampler;
+
+void main() {
+    pixel = vec4(1, 1, 1, 1);
+}

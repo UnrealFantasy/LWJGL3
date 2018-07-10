@@ -1,0 +1,14 @@
+#version 330 core
+
+layout (location = 0) in vec3 vtx;
+layout (location = 1) in vec2 i_txtr;
+
+out vec2 txtr;
+
+uniform mat4 transform, view, project;
+
+void main() {
+    gl_Position = project * view * transform * vec4(vtx, 1);
+
+    txtr = i_txtr;
+}
